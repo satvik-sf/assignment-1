@@ -49,15 +49,4 @@ router.post("/user/delete/:id", function(req, res){
 	}); 
  });
 
-router.post("/exercise/delete/:id", function(req, res){
-	Ex.findById(req.params.id, function(err, e){
-		if(err){
-			console.log(err);
-		} else {
-			e.remove();
-			res.redirect("/admin/exercise");
-		}
-	}); 
- });
-
 module.exports = router;
